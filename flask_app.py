@@ -8,6 +8,7 @@ def home():
 
 @app.route('/form')
 def form():
+    name = request.args.get('n', '')
     if name == '':
         return render_template('simple_form.html')
     else:
