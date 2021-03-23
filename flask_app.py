@@ -11,7 +11,7 @@ def read():
     msg = request.args.get('msg', '')
     if msg != '':
         f = open("file.txt", "a")
-        f.write(msg + <br/>)
+        f.write(msg + '<br>')
         f.close()
     f = open("file.txt", "r")
     return f.read()
