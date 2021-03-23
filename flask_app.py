@@ -6,7 +6,7 @@ app = Flask(__name__)
 def read():
     msg = request.args.get('msg', '')
     if msg != '':
-        f = open("file.txt", "w" + '<br>')
+        f = open("file.txt", "a" + '<br>')
         f.write(msg)
         f.close()
     f = open("file.txt", "r")
