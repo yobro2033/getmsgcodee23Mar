@@ -14,4 +14,4 @@ def read():
 
 @app.route('/')
 def msg():
-    return render_template('msg.html')
+    return render_template('index.html')
