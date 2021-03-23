@@ -2,15 +2,16 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
+@app.route('/read')
+def read():
+    msg = request.args.get('msg', '')
+    if msg != '':
+        f = open("file.txt", "w" + '<br>')
+        f.write(msg)
+        f.close()
+    f = open("file.txt", "r")
+    return f.read()
+
 @app.route('/')
 def msg():
-    msg = request.args.get('msg', '')
-    f = open("file.txt", "w")
-    f.write(msg)
-    f.close()
     return render_template('msg.html')
-
-@app.route('/read')
-def red():
-    f = open('file.txt', 'r')
-    return f.read
