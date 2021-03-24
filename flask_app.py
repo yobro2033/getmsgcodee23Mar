@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def msg():
-    return render_template('html.html')
+    return render_template('msg.html')
 
 @app.route('/read')
 def read():
