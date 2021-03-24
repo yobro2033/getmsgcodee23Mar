@@ -6,7 +6,7 @@ app = Flask(__name__)
 def msg():
     return render_template('index.html')
 
-@app.route('/read')
+@app.route('/save')
 def read():
     msg = request.args.get('msg', '')
     if msg != '':
